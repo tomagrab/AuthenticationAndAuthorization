@@ -1,20 +1,23 @@
 @inject NavigationManager NavigationManager
 @rendermode InteractiveServer
 
-<aside class="h-screen w-40 bg-darkgray">
-    <div class="p-4 pr-0">
+<aside class="w-40">
+    <nav class="h-screen p-4 pr-0 flex flex-col py-4">
         <div class="flex items-center justify-center">
             <button @onclick="GoHome" class="btn-home btn-base btn-primary flex gap-2">
                 <i class="fa-solid fa-database"></i> Data Access
             </button>
         </div>
-        <nav class="flex flex-col gap-2 py-4">
+        <div class="flex-1 flex flex-col gap-2">
             <NavMenuLink Title="Home" Icon="fa-solid fa-home" Href="/" />
             <NavMenuLink Title="Counter" Icon="fa-solid fa-calculator" Href="/counter" />
             <NavMenuLink Title="Fetch Data" Icon="fa-solid fa-cloud-download" Href="/fetchdata" />
             <NavMenuLink Title="Authentication" Icon="fa-solid fa-user" Href="/authentication" />
-        </nav>
-    </div>
+        </div>
+        <div class="">
+            <NavMenuLink Title="Admin" Icon="fa-solid fa-cog" Href="/admin" />
+        </div>
+    </nav>
 </aside>
 
 @code
